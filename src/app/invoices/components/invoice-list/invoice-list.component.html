@@ -1,0 +1,15 @@
+
+<div *ngFor="let client of clients">
+  <h2>{{ client.name }}</h2>
+  <p>{{ client.address }}</p>
+  <img [attr.src]="client.image_url">
+  <div *ngFor="let vehicle of client.vehicles">
+    <h3>{{ vehicle.model }}</h3>
+    <p>{{ vehicle.licensePlate }}</p>
+  </div>
+  <div *ngFor="let invoice of client.invoices">
+    <h3>{{ invoice.id }}</h3>
+    <p>{{ invoice.amount }}</p>
+  </div>
+</div>
+
